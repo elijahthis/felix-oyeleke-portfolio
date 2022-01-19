@@ -142,7 +142,7 @@ const Footer = () => {
                       </div>
                     </a>
                   </Link>
-                  <Link href="https://www.instagram.com/fsoyeleke/" passHref>
+                  <Link href="https://www.instagram.com/felixoyeleke/" passHref>
                     <a target="_blank" rel="noreferrer">
                       <div>
                         <Image src={instagram} layout="fill" alt="instagram" />
