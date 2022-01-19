@@ -135,8 +135,8 @@ const Footer = () => {
                       </div>
                     </a>
                   </Link>
-                  <Link href="" passHref>
-                    <a>
+                  <Link href="https://github.com/FelixOyeleke" passHref>
+                    <a target="_blank" rel="noreferrer">
                       <div>
                         <Image src={github} layout="fill" alt="github" />
                       </div>
