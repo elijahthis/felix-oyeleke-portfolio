@@ -108,7 +108,7 @@ const Modal = ({ image, isOpen, closeModal, slide, subSlide, addSlide }) => {
               closeModal(true); //leave modal open
             }}
           >
-            <Image src={image} layout="responsive" />
+            <Image src={image} layout="responsive" alt="gallery image" />
           </div>
         </div>,
         document.querySelector("#myportal")

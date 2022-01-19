@@ -1,4 +1,5 @@
 import styles from "../styles/education.module.scss";
+import Link from "next/link";
 import Image from "next/image";
 import pisces from "../images/pisces.webp";
 import acoplans from "../images/acoplans.jpg";
@@ -13,6 +14,7 @@ const Experience = () => {
       company: "Pisces Offshore Nigeria Limited",
       period: "Jan. 2021 - Present",
       image: pisces,
+      link: "https://www.piscesoffshore.com/",
     },
     {
       position:
@@ -20,18 +22,21 @@ const Experience = () => {
       company: "Acoplans Surveys Limited",
       period: "Nov. 2020 - Present",
       image: acoplans,
+      link: "https://www.linkedin.com/company/acoplans-surveys-limited/?originalSubdomain=ng",
     },
     {
       position: "QC Geophysicist/Projects Officer",
       company: "Brone Positioning & Offshore Survey Limited, Nigeria.",
       period: "Jun. 2017 - Jan. 2021",
       image: brone,
+      link: "http://www.bronegroup.com/",
     },
     {
       position: "Undergraduate Intern (Field Assistant & Student Trainee)",
       company: "Department of Petroleum Resources, Lagos State, Nigeria",
       period: "Jul. - Dec. 2017",
       image: federal,
+      link: "https://www.nuprc.gov.ng",
     },
   ];
   return (
@@ -47,15 +52,20 @@ const Experience = () => {
             distance={"20px"}
             count={1}
             duration={1000}
+            key={ind}
           >
-            <div className={styles.item} key={ind}>
-              <h4>{item.company}</h4>
-              <div className={styles.img_wrapper}>
-                <Image src={item.image} />
-              </div>
-              <h5>{item.position}</h5>
-              <p>{item.period}</p>
-            </div>
+            <Link href={item.link} passHref>
+              <a target="_blank" rel="noreferrer">
+                <div className={styles.item}>
+                  <h4>{item.company}</h4>
+                  <div className={styles.img_wrapper}>
+                    <Image src={item.image} alt="company logo" />
+                  </div>
+                  <h5>{item.position}</h5>
+                  <p>{item.period}</p>
+                </div>
+              </a>
+            </Link>
           </Fade>
         ))}
       </div>

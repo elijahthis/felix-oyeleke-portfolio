@@ -1,5 +1,6 @@
 import styles from "../styles/resume.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 import ResumeIcon from "../images/resume-icon.svg";
 import { Fade } from "react-reveal";
 
@@ -13,9 +14,11 @@ const Resume = () => {
         <div className={styles.grid_wrap}>
           <div>
             <div className={styles.shaft1}></div>
-            <a href="docs/Felix Oyeleke Resume.pdf" target="_blank">
-              <Image src={ResumeIcon} width={100} />
-            </a>
+            <Link href="docs/Felix Oyeleke Resume.pdf">
+              <a target="_blank" rel="noreferrer">
+                <Image src={ResumeIcon} width={100} alt="resume" />
+              </a>
+            </Link>
             <div className={styles.arrow_rest}>
               <div></div>
               <div></div>
@@ -24,9 +27,11 @@ const Resume = () => {
           </div>
           <div>
             <div className={styles.shaft1}></div>
-            <a href="docs/Felix Oyeleke Resume.pdf" target="_blank">
-              <Image src={ResumeIcon} width={100} />
-            </a>
+            <Link href="docs/Felix Oyeleke Resume.pdf">
+              <a target="_blank" rel="noreferrer">
+                <Image src={ResumeIcon} width={100} alt="resume" />
+              </a>
+            </Link>
             <div className={styles.arrow_rest}>
               <div></div>
               <div></div>

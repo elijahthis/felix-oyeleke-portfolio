@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/navbar.module.scss";
 import logo from "../images/logo.svg";
 
@@ -6,16 +7,16 @@ const NavBar = ({ gallery }) => {
   return (
     <>
       <header className={styles.header}>
-        <a href="/">
+        <Link href="/">
           <div className={styles.img_wrap}>
             <Image src={logo} alt="logo" width={173} height={55} />
           </div>
-        </a>
+        </Link>
         <nav>
           <ul>
-            <a href="/gallery">
+            <Link href="/gallery">
               <li className={`${gallery ? styles.active : ""}`}>Gallery</li>
-            </a>
+            </Link>
           </ul>
         </nav>
       </header>

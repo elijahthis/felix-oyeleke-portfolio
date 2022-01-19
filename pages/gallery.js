@@ -64,14 +64,16 @@ const Gallery = () => {
                 delay={900}
                 duration={1000}
                 count={1}
+                key={ind}
               >
-                <div key={ind}>
+                <div>
                   <Image
                     src={image}
                     onClick={() => {
                       setCurrent(ind);
                       setOpen(true);
                     }}
+                    alt="my picture"
                   />
                 </div>
               </Fade>

@@ -152,8 +152,9 @@ const Skills = () => {
             distance={"20px"}
             count={1}
             duration={1000}
+            key={ind}
           >
-            <div key={ind}>
+            <div>
               <div>{skill[1]}</div>
               {skill[0]}
               <div></div>

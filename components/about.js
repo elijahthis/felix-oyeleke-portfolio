@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import styles from "../styles/about.module.scss";
 import Image from "next/image";
 import me from "../images/me.png";
@@ -25,20 +26,20 @@ const About = () => {
       <div>
         <Fade right delay={600} distance={"20px"} count={1} duration={1000}>
           <div>
-            <Image src={me} layout="fill" objectFit="cover" />
+            <Image src={me} layout="fill" objectFit="cover" alt="me" />
           </div>
         </Fade>
         <Fade left delay={1000} distance={"20px"} duration={1000} count={1}>
           <div>
             <p className={styles.about_text}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy
+              text ever since the 1500s, when an unknown printer took a galley
+              of type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged...
             </p>
-            <a href="#resume">
+            <Link href="#resume">
               <span className={styles.btn}>
                 <div>My Resume</div>
                 <svg
@@ -55,7 +56,7 @@ const About = () => {
                   </g>
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </Fade>
       </div>

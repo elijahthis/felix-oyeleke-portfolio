@@ -1,4 +1,5 @@
 import NavBar from "./navBar";
+import Link from "next/link";
 import styles from "../styles/hero.module.scss";
 import RubberBand from "react-reveal/RubberBand";
 import { Fade } from "react-reveal";
@@ -14,9 +15,11 @@ const Hero = () => {
         </RubberBand>
         <Fade bottom delay={1400} distance={"20px"} count={1} duration={1000}>
           <h6>Hydrographic Surveyor</h6>
-          <a href="#about" className={styles.btn}>
-            <span>Get Started</span>
-          </a>
+          <Link href="#about" passHref>
+            <a className={styles.btn} style={{ display: "block" }}>
+              <span>Get Started</span>
+            </a>
+          </Link>
         </Fade>
       </div>
     </section>

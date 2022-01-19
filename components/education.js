@@ -1,4 +1,5 @@
 import styles from "../styles/education.module.scss";
+import Link from "next/link";
 import Image from "next/image";
 import futa from "../images/futa.png";
 import mun from "../images/MUN.jpg";
@@ -36,17 +37,20 @@ const Education = () => {
             distance={"20px"}
             count={1}
             duration={1000}
+            key={ind}
           >
-            <a href={item.link} target="_blank" key={ind}>
-              <div className={styles.item}>
-                <h4>{item.school}</h4>
-                <div className={styles.img_wrapper}>
-                  <Image src={item.image} />
+            <Link href={item.link} passHref>
+              <a target="_blank" rel="noreferrer">
+                <div className={styles.item}>
+                  <h4>{item.school}</h4>
+                  <div className={styles.img_wrapper}>
+                    <Image src={item.image} alt="school logo" />
+                  </div>
+                  <h5>{item.certification}</h5>
+                  <p>{item.year}</p>
                 </div>
-                <h5>{item.certification}</h5>
-                <p>{item.year}</p>
-              </div>
-            </a>
+              </a>
+            </Link>
           </Fade>
         ))}
       </div>

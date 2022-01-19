@@ -4,6 +4,10 @@
   height: 450px;
   padding: 100px 8vw;
   color: $main-col;
+
+  & > :first-child:hover {
+    cursor: pointer;
+  }
   section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -120,6 +124,9 @@
     display: flex;
     flex-direction: column;
     padding: 25px 8vw;
+    & > :first-child:hover {
+      cursor: pointer;
+    }
 
     p {
       font-weight: 700;
