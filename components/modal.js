@@ -17,12 +17,12 @@ const Modal = ({ image, isOpen, closeModal, slide, subSlide, addSlide }) => {
   };
 
   const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 150) {
-      subSlide();
+    if (touchStart - touchEnd > 100) {
+      addSlide();
     }
 
-    if (touchStart - touchEnd < -150) {
-      addSlide();
+    if (touchStart - touchEnd < -100) {
+      subSlide();
     }
   };
 

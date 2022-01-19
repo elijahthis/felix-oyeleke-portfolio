@@ -38,6 +38,9 @@
 
   .img_wrap {
     width: 30vw;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   ul {
