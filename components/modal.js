@@ -43,6 +43,7 @@ const Modal = ({ image, isOpen, closeModal, slide, subSlide, addSlide }) => {
       height="96px"
       id="arrow_left"
       version="1.1"
+      key={0}
       viewBox="0 0 96 96"
       width="96px"
       xmlSpace="preserve"
@@ -59,6 +60,7 @@ const Modal = ({ image, isOpen, closeModal, slide, subSlide, addSlide }) => {
       height="96px"
       id="arrow_right"
       version="1.1"
+      key={1}
       viewBox="0 0 96 96"
       width="96px"
       xmlSpace="preserve"

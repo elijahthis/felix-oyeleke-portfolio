@@ -7,14 +7,14 @@ const NavBar = ({ gallery }) => {
   return (
     <>
       <header className={styles.header}>
-        <Link href="/">
+        <Link href="/" passHref>
           <div className={styles.img_wrap}>
             <Image src={logo} alt="logo" width={173} height={55} />
           </div>
         </Link>
         <nav>
           <ul>
-            <Link href="/gallery">
+            <Link href="/gallery" passHref>
               <li className={`${gallery ? styles.active : ""}`}>Gallery</li>
             </Link>
           </ul>

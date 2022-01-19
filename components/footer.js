@@ -13,7 +13,7 @@ const Footer = () => {
     <>
       <Fade clear distance={"50px"} delay={300} duration={1000} count={1}>
         <footer className={styles.big_footer}>
-          <Link href="/">
+          <Link href="/" passHref>
             <Image src={logo} alt="logo" width={173} height={55} />
           </Link>
           <section>
@@ -92,7 +92,7 @@ const Footer = () => {
       <Fade clear distance={"50px"} delay={300} duration={1000} count={1}>
         <footer className={styles.mobile_footer}>
           <div>
-            <Link href="/">
+            <Link href="/" passHref>
               <Image src={logo} alt="logo" width={173} height={55} />
             </Link>
           </div>
@@ -114,7 +114,7 @@ const Footer = () => {
                   </a>
                 </Link>
                 <Link href="/#contact" passHref>
-                  <a style={{ display: "block" }}>
+                  <a style={{ display: "block", marginTop: "20px" }}>
                     <p>Contact</p>
                   </a>
                 </Link>

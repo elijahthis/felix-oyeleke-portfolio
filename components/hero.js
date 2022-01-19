@@ -11,7 +11,7 @@ const Hero = () => {
 
       <div className={styles.big_center}>
         <RubberBand delay={500} duration={1500} wait={3000} count={2}>
-          <h1>Hello, I'm Felix</h1>
+          <h1>Hello, I&apos;m Felix</h1>
         </RubberBand>
         <Fade bottom delay={1400} distance={"20px"} count={1} duration={1000}>
           <h6>Hydrographic Surveyor</h6>

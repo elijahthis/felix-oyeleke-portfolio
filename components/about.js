@@ -39,7 +39,7 @@ const About = () => {
               survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged...
             </p>
-            <Link href="#resume">
+            <Link href="#resume" passHref>
               <span className={styles.btn}>
                 <div>My Resume</div>
                 <svg
