@@ -69,14 +69,14 @@ const Footer = () => {
                       </div>
                     </a>
                   </Link>
-                  <Link href="" passHref>
-                    <a>
+                  <Link href="https://github.com/FelixOyeleke" passHref>
+                    <a target="_blank" rel="noreferrer">
                       <div>
                         <Image src={github} layout="fill" alt="github" />
                       </div>
                     </a>
                   </Link>
-                  <Link href="https://www.instagram.com/fsoyeleke/" passHref>
+                  <Link href="https://www.instagram.com/felixoyeleke/" passHref>
                     <a target="_blank" rel="noreferrer">
                       <div>
                         <Image src={instagram} layout="fill" alt="instagram" />
