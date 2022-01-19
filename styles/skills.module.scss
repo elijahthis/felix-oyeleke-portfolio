@@ -1,0 +1,122 @@
+@import "config", "_include-media";
+
+.big_section {
+  min-height: clamp(640px, 100vh, 960px);
+  background-color: $main-col;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 8vw;
+  & > * {
+    color: $sec-col;
+  }
+  & > :first-child {
+    padding-top: 120px;
+  }
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  width: clamp(100%, 100%, 3000px);
+  margin-top: 16px;
+
+  & > * {
+    background-color: $main-col;
+    color: $sec-col;
+    border-radius: 5px;
+    height: 18vw;
+    padding: 10px;
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.25);
+    transition: color 0.4s, background-color 0.4s;
+    &:hover {
+      background-color: $sec-col;
+      color: $main-col;
+    }
+
+    & > :nth-child(1) {
+      position: absolute;
+      top: 15%;
+      width: 50px;
+      height: 50px;
+      background-color: $accent-col;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.25);
+
+      svg {
+        width: 30px;
+        fill: $sec-col;
+        stroke: $sec-col;
+      }
+    }
+
+    & > :nth-child(2) {
+      position: absolute;
+      background-color: $accent-col;
+      bottom: 0;
+      width: 100%;
+      height: 10px;
+      border-radius: 0px 0px 5px 5px;
+    }
+  }
+}
+
+@include media("<1150px") {
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    & > * {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 30px;
+      margin-right: 30px;
+      & > :nth-child(1) {
+        position: absolute;
+        top: 15%;
+        width: 40px;
+        height: 40px;
+        svg {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include media("<tablet") {
+  .big_section {
+    min-height: clamp(640px, 100vh, 960px);
+    background-color: $main-col;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 8vw;
+    & > * {
+      color: $sec-col;
+    }
+    & > :first-child {
+      padding-top: 60px;
+    }
+  }
+  .skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    // justify-content: stretch;
+    flex-wrap: wrap;
+  }
+}

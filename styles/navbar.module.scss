@@ -1,0 +1,79 @@
+@import "config", "_include-media";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // background-color: $sec-col;
+  background-image: linear-gradient(
+    to bottom,
+    $sec-col 95%,
+    rgba(245, 245, 245, 0.5)
+  );
+
+  height: 80px;
+  width: 100vw;
+  font-size: 16px;
+  font-weight: 400;
+  color: $main-col;
+  padding: 0px 8vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  // border-bottom: 1px solid black;
+
+  .active {
+    font-weight: 700;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $accent-col;
+      transform: scale(1);
+    }
+  }
+
+  .img_wrap {
+    width: 30vw;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    li {
+      font-weight: 700;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $accent-col;
+        transform: scaleX(0);
+        transition: transform 0.4s;
+      }
+      &:hover {
+        cursor: pointer;
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3px;
+          background-color: $accent-col;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+@include media("<tablet") {
+  .header {
+    height: 60px;
+  }
+}

@@ -1,0 +1,117 @@
+@import "config", "_include-media";
+
+.big_section {
+  min-height: clamp(640px, 100vh, 768px);
+  background-color: $sec-col;
+  padding: 0px 8vw;
+  margin: 0;
+
+  h3 {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  & > :nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    & > :first-child {
+      position: relative;
+      margin: 16px 0px;
+      border-radius: 7px;
+      overflow: hidden;
+      margin-right: 60px;
+      opacity: 0;
+      transition: opacity 3s 0.3s;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+      width: 350px;
+      height: 350px;
+    }
+    & > :nth-child(2) {
+      width: 40vw;
+    }
+  }
+
+  & > :first-child {
+    padding-top: 120px;
+    text-align: center;
+  }
+}
+
+.about_text {
+  margin: 16px 0px;
+}
+
+.btn {
+  background-color: $accent-col;
+  color: $sec-col;
+  padding: 12px 40px;
+  border-radius: 3px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  position: relative;
+
+  svg {
+    fill: $sec-col;
+    width: 30px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.8s;
+    top: 10px;
+    right: 10px;
+  }
+  div {
+    transition: transform 0.8s;
+  }
+  &:hover {
+    cursor: pointer;
+
+    svg {
+      opacity: 1;
+    }
+    div {
+      transform: translateX(-15px);
+    }
+  }
+}
+
+@include media(">tablet", "<desktop") {
+  .big_section {
+    & > :nth-child(2) {
+      & > :first-child {
+        // opacity: 0;
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}
+
+@include media("<tablet") {
+  .big_section {
+    & > :nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > :first-child {
+        // opacity: 0;
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+      }
+      & > :nth-child(2) {
+        width: 80vw;
+      }
+    }
+    & > :first-child {
+      padding-top: 60px;
+      text-align: left;
+    }
+  }
+}

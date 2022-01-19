@@ -1,0 +1,141 @@
+@import "config", "_include-media";
+
+.big_section {
+  min-height: clamp(640px, 100vh, 960px);
+  background-color: $sec-col;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 8vw;
+  & > * {
+    color: $main-col;
+  }
+  & > :first-child {
+    padding-top: 110px;
+  }
+
+  & > :nth-child(2) {
+    margin-top: 16px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 90vw;
+    div {
+      width: 300px;
+      height: 300px;
+      border-radius: 7px;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    img {
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// .img_previewer {
+//   position: absolute;
+//   width: 80vw;
+//   height: 75vh;
+// }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.9);
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  max-height: 100vh;
+  width: 30%;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  svg {
+    fill: white;
+    width: 50px;
+    transition: transform 0.5s;
+    &:hover {
+      cursor: pointer;
+      transform: translateX(10px);
+    }
+  }
+  & > :first-child {
+    transform: scale(-1);
+    &:hover {
+      cursor: pointer;
+      transform: scale(-1) translateX(10px);
+    }
+  }
+}
+
+.count {
+  color: #ffffff;
+  position: absolute;
+  top: 50px;
+}
+
+@include media("<1000px") {
+  .modal {
+    max-height: 100vh;
+    width: 60%;
+  }
+}
+
+@include media("<tablet") {
+  .arrows {
+    display: none;
+  }
+
+  .overlay {
+    height: 100vh;
+  }
+  .modal {
+    max-height: 100vh;
+    width: 80%;
+  }
+}
+
+@include media("<340px") {
+  .big_section > :nth-child(2) {
+    div {
+      width: 270px;
+      height: 270px;
+    }
+  }
+}
