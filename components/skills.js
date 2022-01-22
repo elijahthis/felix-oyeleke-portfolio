@@ -22,7 +22,7 @@ const Skills = () => {
       </svg>,
     ],
     [
-      "Hydrographic Data Processing",
+      "Hydrographic Survey",
       <svg
         version="1.1"
         id="Layer_1"

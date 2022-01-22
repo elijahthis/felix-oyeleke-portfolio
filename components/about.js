@@ -41,7 +41,7 @@ const About = () => {
             </p>
             <Link href="#resume" passHref>
               <span className={styles.btn}>
-                <div>My Resume</div>
+                <div>Read more...</div>
                 <svg
                   x="0px"
                   y="0px"
