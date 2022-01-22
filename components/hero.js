@@ -7,7 +7,7 @@ import { Fade } from "react-reveal";
 const Hero = () => {
   return (
     <section className={styles.big_section}>
-      <NavBar gallery={false} />
+      <NavBar home={true} />
 
       <div className={styles.big_center}>
         <RubberBand delay={500} duration={1500} wait={3000} count={2}>

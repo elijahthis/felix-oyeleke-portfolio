@@ -48,6 +48,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 50vw;
 
     li {
       font-weight: 700;
@@ -74,9 +75,83 @@
     }
   }
 }
+.mobile_header {
+  display: none;
+}
 
 @include media("<tablet") {
   .header {
+    display: none;
+  }
+  .mobile_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    // background-color: $sec-col;
+    background-image: linear-gradient(
+      to bottom,
+      $sec-col 95%,
+      rgba(245, 245, 245, 0.5)
+    );
     height: 60px;
+    width: 100vw;
+    font-size: 16px;
+    font-weight: 400;
+    color: $main-col;
+    padding: 0px 8vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    nav {
+      background-color: $accent-col;
+      color: $sec-col;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0;
+      transition: right 0.6s;
+    }
+    ul {
+      // width: 80vw;
+      font-size: 14px;
+      list-style-type: none;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      li {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 400;
+        font-size: 30px;
+        transition: letter-spacing 0.7s, font-weight 0.7s, color 0.7s;
+        &:hover {
+          font-weight: 700;
+          letter-spacing: 10px;
+          color: $main-col;
+        }
+      }
+    }
+  }
+  .invisible {
+    position: absolute;
+    top: 0;
+    right: -100%;
+  }
+  .visible {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .img_wrap {
+    width: clamp(100px, 30vw, 115px);
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
