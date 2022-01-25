@@ -20,6 +20,7 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    ev.target.reset();
   };
   return (
     <section className={styles.big_section} id="contact">
