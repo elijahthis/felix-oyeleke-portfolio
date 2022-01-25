@@ -33,7 +33,7 @@ const About = () => {
           <div>
             <div className={styles.about_text}>
               <p>
-                Hii. My name is Felix Oyeleke. I'm currently a marine
+                Hii. My name is Felix Oyeleke. I&apos;m currently a marine
                 geophysicist/data processor at Pisces Offshore Limited. I hold a
                 Bachelor of Technology degree in Marine Science and Technology.
                 I have a deep background in Marine Science and Technology, and
