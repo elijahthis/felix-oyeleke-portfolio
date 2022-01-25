@@ -100,11 +100,9 @@ const Footer = () => {
             <div className={styles.grid_item_2}>
               <div>
                 <Link href="/gallery" passHref>
-                  <a>
-                    <p>
-                      <span>Gallery</span>
-                    </p>
-                  </a>
+                  <p>
+                    <span>Gallery</span>
+                  </p>
                 </Link>
                 <Link href="/#resume" passHref>
                   <a>

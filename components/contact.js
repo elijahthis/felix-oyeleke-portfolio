@@ -1,7 +1,26 @@
 import styles from "../styles/contact.module.scss";
 import { Fade } from "react-reveal";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const sendEmail = (ev) => {
+    ev.preventDefault();
+    emailjs
+      .sendForm(
+        "service_v8eywx6",
+        "template_vrbisro",
+        ev.target,
+        "user_3IGxYKsaWpDLDtc6FaRt6"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <section className={styles.big_section} id="contact">
       <Fade clear distance={"50px"} delay={300} duration={1000} count={1}>
@@ -16,23 +35,23 @@ const Contact = () => {
       <Fade right delay={1200} distance={"20px"} count={1} duration={1000}>
         <div>
           <div></div>
-          <form>
+          <form onSubmit={sendEmail}>
             <div>
               <label>
                 Name
-                <input type="text" name="Name" />
+                <input type="text" name="from_name" />
               </label>
             </div>
             <div>
               <label>
                 Email Address
-                <input type="email" name="Email" />
+                <input type="email" name="from_email" />
               </label>
             </div>
             <div>
               <label>
                 Message
-                <textarea style={{ height: "100px" }}></textarea>
+                <textarea style={{ height: "100px" }} name="message"></textarea>
               </label>
             </div>
             <span className={styles.btn}>

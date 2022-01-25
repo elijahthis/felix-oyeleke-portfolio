@@ -31,31 +31,46 @@ const About = () => {
         </Fade>
         <Fade left delay={1000} distance={"20px"} duration={1000} count={1}>
           <div>
-            <p className={styles.about_text}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged...
-            </p>
-            <Link href="#resume" passHref>
-              <span className={styles.btn}>
-                <div>Read more...</div>
-                <svg
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 1000 1000"
-                  enableBackground="new 0 0 1000 1000"
-                  xmlSpace="preserve"
-                >
-                  <g>
-                    <g transform="matrix(1 0 0 -1 0 1008)">
-                      <path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z" />
+            <div className={styles.about_text}>
+              <p>
+                Hii. My name is Felix Oyeleke. I'm currently a marine
+                geophysicist/data processor at Pisces Offshore Limited. I hold a
+                Bachelor of Technology degree in Marine Science and Technology.
+                I have a deep background in Marine Science and Technology, and
+                am passionate about using geophysical and deep learning
+                techniques to solve Marine Science related issues.
+              </p>
+              <p>
+                My area of interest is deep learning and hydrographic science.
+                Most of my projects involve Geophysical Seabed Survey,
+                Bathymetric Surveys, Seabed Habitat Mapping, 2HDR Geophysical
+                Survey, etc.
+              </p>
+              <p>
+                I am driven, ambitious, and quick-witted. I also love meeting
+                new people and getting to experience new cultures, while being
+                friendly and social.
+              </p>
+            </div>
+            <Link href="https://www.linkedin.com/in/fsoyeleke/" passHref>
+              <a target="_blank" rel="noreferrer">
+                <span className={styles.btn}>
+                  <div>Read more...</div>
+                  <svg
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 1000 1000"
+                    enableBackground="new 0 0 1000 1000"
+                    xmlSpace="preserve"
+                  >
+                    <g>
+                      <g transform="matrix(1 0 0 -1 0 1008)">
+                        <path d="M756.2,741.8L990,508L756.2,274.2l-27,27L918.1,490H10v36h908.1L729.3,714.8L756.2,741.8z" />
+                      </g>
                     </g>
-                  </g>
-                </svg>
-              </span>
+                  </svg>
+                </span>
+              </a>
             </Link>
           </div>
         </Fade>

@@ -14,7 +14,7 @@ const Resume = () => {
         <div className={styles.grid_wrap}>
           <div>
             <div className={styles.shaft1}></div>
-            <Link href="docs/Felix Oyeleke Resume.pdf">
+            <Link href="/docs/Resume.pdf">
               <a target="_blank" rel="noreferrer">
                 <Image src={ResumeIcon} width={100} alt="resume" />
               </a>
@@ -27,7 +27,7 @@ const Resume = () => {
           </div>
           <div>
             <div className={styles.shaft1}></div>
-            <Link href="docs/Felix Oyeleke Resume.pdf">
+            <Link href="/docs/Resume.pdf">
               <a target="_blank" rel="noreferrer">
                 <Image src={ResumeIcon} width={100} alt="resume" />
               </a>

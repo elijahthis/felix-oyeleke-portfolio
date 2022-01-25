@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Felix Oyeleke - Portfolio</title>
-        <link rel="icon" type="image/png" href="icon.png" />
+        <title>Felix Oyeleke</title>
+        <link rel="icon" type="image/png" href="favicon.png" />
         <meta property="og:title" content="Felix Oyeleke - Portfolio" />
         <meta property="og:url" content="https://felix-oyeleke.netlify.app/" />
         <meta

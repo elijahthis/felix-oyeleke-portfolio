@@ -10,7 +10,7 @@ const Education = () => {
     {
       certification:
         "Marine Science & Technology (Marine Geosciences) (B.Tech.)",
-      year: 2018,
+      year: "2018",
       school: "Federal University of Technology, Akure, Ondo State, Nigeria.",
       image: futa,
       link: "https://www.futa.edu.ng/",
@@ -18,7 +18,7 @@ const Education = () => {
     {
       certification:
         "Ocean Mapping (Masters of Applied Ocean Technology) - (IHO, Cat. B.)",
-      year: 2022,
+      year: "2024 (In View)",
       school: "Memorial University of Newfoundland, Canada",
       image: mun,
       link: "https://www.mun.ca/",
