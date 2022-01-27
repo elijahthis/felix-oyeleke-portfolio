@@ -33,23 +33,11 @@ const About = () => {
           <div>
             <div className={styles.about_text}>
               <p>
-                Hii. My name is Felix Oyeleke. I&apos;m currently a marine
-                geophysicist/data processor at Pisces Offshore Limited. I hold a
-                Bachelor of Technology degree in Marine Science and Technology.
-                I have a deep background in Marine Science and Technology, and
-                am passionate about using geophysical and deep learning
-                techniques to solve Marine Science related issues.
-              </p>
-              <p>
-                My area of interest is deep learning and hydrographic science.
-                Most of my projects involve Geophysical Seabed Survey,
-                Bathymetric Surveys, Seabed Habitat Mapping, 2HDR Geophysical
-                Survey, etc.
-              </p>
-              <p>
-                I am driven, ambitious, and quick-witted. I also love meeting
-                new people and getting to experience new cultures, while being
-                friendly and social.
+                Hi, I am Felix Oyeleke, a Marine Geophysicist/Hydrographic
+                Surveyor at Pisces Offshore Limited. I hold a Bachelor of
+                Technology degree in Marine Science and Technology. I have a
+                deep knowledge of the geology and petroleum systems of the Gulf
+                of Guinea.
               </p>
             </div>
             <Link href="https://www.linkedin.com/in/fsoyeleke/" passHref>
